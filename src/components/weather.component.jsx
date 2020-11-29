@@ -8,10 +8,11 @@ const Weather = (props) => {
                 <h1>{props.city}, {props.country}</h1>
                 <h2>{props.localTime}</h2>
                 <h5 className="py-4">
-                    <i className="wi wi-day-sunny display-1"></i>
+                    <i className={`wi ${props.weatherIcon} display-1`}></i>
                 </h5>
                 <h1 className="py2">Current Temp: {props.celsius}&deg;</h1>   
-                <h1 className="py2">Feels Like: {props.feelsLikeCelsius}&deg;</h1>             
+                <h1 className="py2">Feels Like: {props.feelsLikeCelsius}&deg;</h1>    
+                <h1 className="py2">Humidity: {props.humidity} %</h1>         
             </div>
         </div>
     );
